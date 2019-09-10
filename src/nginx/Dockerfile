@@ -5,7 +5,7 @@
 #
 FROM openshift/origin-cli:v3.11.0
 
-ENV NGINX_VERSION 1.15.6-1.el7_4.ngx
+ENV NGINX_VERSION 1.17.3-1.el7.ngx
 
 COPY nginx.repo /etc/yum.repos.d/ 
 
