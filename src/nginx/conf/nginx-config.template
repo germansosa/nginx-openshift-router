@@ -43,6 +43,8 @@ http {
   sendfile     on;
   tcp_nopush   on;
   server_names_hash_bucket_size 256;
+  
+  server_tokens off;
 
   proxy_temp_path /var/lib/nginx/cache/proxy_temp;
   client_body_temp_path /var/lib/nginx/cache/client_temp;
