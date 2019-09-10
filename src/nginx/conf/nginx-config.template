@@ -15,7 +15,7 @@ worker_cpu_affinity {{ $cpuAffinity }};
 {{ with $syslogAddress := env "ROUTER_SYSLOG_ADDRESS" }}
 error_log syslog:server={{ $syslogAddress }},facility={{env "ROUTER_LOG_FACILITY" "local1"}} {{ $logLevel }}; 
 {{ else }}
-error_log  /var/lib/nginx/log/error.log {{ $logLevel }};
+error_log  stderr {{ $logLevel }};
 {{ end }} 
 pid        /var/lib/nginx/run/nginx.pid;
 worker_rlimit_nofile {{ env "WORKER_RLIMIT_NOFILE" "8192" }};
